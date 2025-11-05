@@ -20,13 +20,20 @@ class pr03 {
 				System.out.println(number[i] + " / " + denom[i] + " = " + number[i]/denom[i]);
 				//ExcTest.getException();
 			}
-
-		//catch(ArrayIndextOutOfBoundsException exc) {
-		//	System.out.println("Искл. ситуация: за границами массива");
-		//}
-			catch(ArithmeticException exc2) {
-				System.out.println("Искл. ситуация: неверная операция");
+			
+			
+			catch(ArrayIndextOutOfBoundsException exc) {
+				System.out.println("Искл. ситуация: за границами массива");
+			
+			
 			}
+			//catch(ArithmeticException exc2) {
+			//	System.out.println("Искл. ситуация: неверная операция");
+			//}
+			//System.out.println("После catch");
+		}
+			catch (Throwable exc) {
+				System.out.println("Исключение без обработчика");
 			System.out.println("После catch");
 		}
 	}
